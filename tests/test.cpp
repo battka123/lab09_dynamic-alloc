@@ -1,4 +1,4 @@
-// Copyright 2020 Your Name <your_email>
+// Copyright 2022 Ivan Sushin <i.suschin@yamdex.ru>
 
 #include <gtest/gtest.h>
 
@@ -10,7 +10,6 @@ TEST(String, CopyString)
     const char* p = "some string";
 
     char* str = CopyString(p);
-    p = "hello, world!";
 
     EXPECT_EQ(str[0], 's');
     EXPECT_EQ(str[1], 'o');

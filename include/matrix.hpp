@@ -1,6 +1,10 @@
+// Copyright 2022 Ivan Sushin <i.suschin@yamdex.ru>
 
 #ifndef INCLUDE_MATRIX_HPP_
 #define INCLUDE_MATRIX_HPP_
+
+#include <cstddef>
+#include <cstdlib>
 
 struct Matrix {
   int** data_ = nullptr;
