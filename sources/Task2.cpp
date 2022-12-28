@@ -57,7 +57,7 @@ Matrix Add_or_Sub(const Matrix& a, const Matrix& b, int k) {
       }
     }
   } else
-    Destruct(c);
+    (Destruct(c));
   return c;
 }
 Matrix Add(const Matrix& a, const Matrix& b) {
@@ -75,7 +75,7 @@ Matrix Mult(const Matrix& a, const Matrix& b) {
     Construct(c, b.n_,
               a.m_);  // Создаю нулевую матрицу, столбцов как у второй, строк
                       // как у первой то есть n_=[b.n]  на m_=[a.m]
-    for (size_t i = 0; i < c.n_; ++i) {    // переюираю столбцов матрицы с
+    for (size_t i = 0; i < c.n_; ++i) {  // переюираю столбцов матрицы с
       for (size_t j = 0; j < c.m_; ++j) {  // перебираю строк матрицы с
         for (size_t k = 0; k < a.n_; ++k) {
           c.data_[i][j] += ((b.data_[i][k]) * (a.data_[k][j]));
@@ -83,7 +83,7 @@ Matrix Mult(const Matrix& a, const Matrix& b) {
       }
     }
   } else
-    Destruct(c);
+    (Destruct(c));
   return c;
 }
 
@@ -105,5 +105,5 @@ bool operator==(const Matrix& a, const Matrix& b) {
         } else
           return a.data_ != b.data_;
   }
-  return a.data_ == b.data_ && a.m_ == b.m_ && a.n_ == b.n_;
+  return (a.data_ == b.data_ && a.m_ == b.m_ && a.n_ == b.n_);
 }

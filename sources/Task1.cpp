@@ -2,8 +2,7 @@
 
 #include "string.hpp"
 
-int size(const char* str1)
-{
+int size(const char* str1) {
   int size = 0;
   while (str1[size] != '\0') size++;
   return size;
@@ -16,19 +15,20 @@ char* CopyString(const char* str) {
     memcpy(new_str, str, size(str));
     new_str[size(str)] = 0;
     return new_str;
-  }
-  else return nullptr;
+  } else
+    return nullptr;
 }
 
 // second part
-char* ConcatinateStrings(const char* a, const char* b){
+char* ConcatinateStrings(const char* a, const char* b) {
   char* new_a = CopyString(a);
-  size_t i,j;
-  for (i = 0; a[i] != '\0'; i++);
-  if (new_a){
-    for (j = 0; b[j] != '\0'; j++) new_a[i+j] = b[j];
-    new_a[i+j] = '\0';
+  size_t i, j;
+  for (i = 0; a[i] != '\0'; i++)
+    ;
+  if (new_a) {
+    for (j = 0; b[j] != '\0'; j++) new_a[i + j] = b[j];
+    new_a[i + j] = '\0';
     return new_a;
-  }
-  else return nullptr;
+  } else
+    return nullptr;
 }
